@@ -15,6 +15,10 @@
 		3B00BE4920A9E9A60093EF52 /* TensorflowIOSDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00BE4820A9E9A60093EF52 /* TensorflowIOSDemoTests.swift */; };
 		3B00BE5420A9E9A70093EF52 /* TensorflowIOSDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00BE5320A9E9A70093EF52 /* TensorflowIOSDemoUITests.swift */; };
 		3B1DB64920AAA6E70090C300 /* Mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DB64820AAA6E70090C300 /* Mnist.mlmodel */; };
+		3BE95D1520ABB9F8001A4422 /* test_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE95D1420ABB9F8001A4422 /* test_image.png */; };
+		3BE95D1920ABF7D4001A4422 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE95D1620ABF7D3001A4422 /* 2.png */; };
+		3BE95D1A20ABF7D4001A4422 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE95D1720ABF7D3001A4422 /* 3.png */; };
+		3BE95D1B20ABF7D4001A4422 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE95D1820ABF7D4001A4422 /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		3B00BE5320A9E9A70093EF52 /* TensorflowIOSDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorflowIOSDemoUITests.swift; sourceTree = "<group>"; };
 		3B00BE5520A9E9A70093EF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1DB64820AAA6E70090C300 /* Mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Mnist.mlmodel; sourceTree = "<group>"; };
+		3BE95D1420ABB9F8001A4422 /* test_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image.png; sourceTree = "<group>"; };
+		3BE95D1620ABF7D3001A4422 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		3BE95D1720ABF7D3001A4422 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		3BE95D1820ABF7D4001A4422 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				3B1DB64820AAA6E70090C300 /* Mnist.mlmodel */,
+				3BE95D1420ABB9F8001A4422 /* test_image.png */,
+				3BE95D1820ABF7D4001A4422 /* 1.png */,
+				3BE95D1620ABF7D3001A4422 /* 2.png */,
+				3BE95D1720ABF7D3001A4422 /* 3.png */,
 				3B00BE3320A9E9A50093EF52 /* AppDelegate.swift */,
 				3B00BE3520A9E9A50093EF52 /* ViewController.swift */,
 				3B00BE3720A9E9A50093EF52 /* Main.storyboard */,
@@ -234,7 +246,11 @@
 			files = (
 				3B00BE3E20A9E9A60093EF52 /* LaunchScreen.storyboard in Resources */,
 				3B00BE3B20A9E9A60093EF52 /* Assets.xcassets in Resources */,
+				3BE95D1920ABF7D4001A4422 /* 2.png in Resources */,
+				3BE95D1A20ABF7D4001A4422 /* 3.png in Resources */,
 				3B00BE3920A9E9A50093EF52 /* Main.storyboard in Resources */,
+				3BE95D1520ABB9F8001A4422 /* test_image.png in Resources */,
+				3BE95D1B20ABF7D4001A4422 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
