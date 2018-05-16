@@ -9,6 +9,8 @@
 import UIKit
 import CoreML
 class ViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         useCoreML2()
@@ -16,6 +18,7 @@ class ViewController: UIViewController {
     func useCoreML2(){
         let imagePath = Bundle.main.path(forResource: "test_image", ofType: "png")
         let imageData:UIImage = UIImage(contentsOfFile: imagePath!)!
+        imageView.image = imageData
         let width = imageData.cgImage?.width
         let height = imageData.cgImage?.height
         
@@ -23,6 +26,7 @@ class ViewController: UIViewController {
         var image = Array<Int>()
         for i in 0...(width! * height! - 1){
             let postion = i*4
+            // gaijin
             image.append(Int(data[postion]))
         }
         
@@ -44,10 +48,12 @@ class ViewController: UIViewController {
             }
             let mnistInput = MnistInput(input__x_input__0: array)
             let result = try mnist.prediction(input: mnistInput)
+            var text = ""
             for i in 0...(result.Softmax__0.count - 1){
                 let item = result.Softmax__0[i]
-                print("\(i) possibility : \(String(format:"%.2f",item.floatValue))")
+                text += "\(i) possibility : \(String(format:"%.2f",item.floatValue))\n"
             }
+            label.text = text
         }catch{
             print(error)
         }
@@ -86,3 +92,47 @@ class ViewController: UIViewController {
     }
 }
 
+
+
+
+let imagePath = Bundle.main.path(forResource: "test_image", ofType: "png")
+let imageData:UIImage = UIImage(contentsOfFile: imagePath!)!
+imageView.image = imageData
+let width = imageData.cgImage?.width
+let height = imageData.cgImage?.height
+
+let data:UnsafePointer<UInt8> = CFDataGetBytePtr(imageData.cgImage?.dataProvider?.data!)
+var image = Array<Int>()
+for i in 0...(width! * height! - 1){
+    let postion = i*4
+    // gaijin
+    image.append(Int(data[postion]))
+}
+
+let mnist = Mnist()
+do{
+    // print shape
+    for i in 0...783{
+        if(i % 28 == 0){
+            print("")
+        }
+        print("\(String(format: "% 2x", image[i]))",terminator: "")
+    }
+    print("")
+    
+    let array = try MLMultiArray(shape: [784], dataType: MLMultiArrayDataType.float32)
+    for i in 0...(image.count-1) {
+        let value = Double(image[i]) / 255.0
+        array[i]  = NSNumber(floatLiteral: value)
+    }
+    let mnistInput = MnistInput(input__x_input__0: array)
+    let result = try mnist.prediction(input: mnistInput)
+    var text = ""
+    for i in 0...(result.Softmax__0.count - 1){
+        let item = result.Softmax__0[i]
+        text += "\(i) possibility : \(String(format:"%.2f",item.floatValue))\n"
+    }
+    label.text = text
+}catch{
+    print(error)
+}
