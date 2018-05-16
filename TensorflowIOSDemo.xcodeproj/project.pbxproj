@@ -14,6 +14,7 @@
 		3B00BE3E20A9E9A60093EF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B00BE3C20A9E9A60093EF52 /* LaunchScreen.storyboard */; };
 		3B00BE4920A9E9A60093EF52 /* TensorflowIOSDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00BE4820A9E9A60093EF52 /* TensorflowIOSDemoTests.swift */; };
 		3B00BE5420A9E9A70093EF52 /* TensorflowIOSDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00BE5320A9E9A70093EF52 /* TensorflowIOSDemoUITests.swift */; };
+		3B1DB64920AAA6E70090C300 /* Mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DB64820AAA6E70090C300 /* Mnist.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3B00BE4F20A9E9A70093EF52 /* TensorflowIOSDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TensorflowIOSDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B00BE5320A9E9A70093EF52 /* TensorflowIOSDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorflowIOSDemoUITests.swift; sourceTree = "<group>"; };
 		3B00BE5520A9E9A70093EF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1DB64820AAA6E70090C300 /* Mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Mnist.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		3B00BE3220A9E9A50093EF52 /* TensorflowIOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B1DB64820AAA6E70090C300 /* Mnist.mlmodel */,
 				3B00BE3320A9E9A50093EF52 /* AppDelegate.swift */,
 				3B00BE3520A9E9A50093EF52 /* ViewController.swift */,
 				3B00BE3720A9E9A50093EF52 /* Main.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1DB64920AAA6E70090C300 /* Mnist.mlmodel in Sources */,
 				3B00BE3620A9E9A50093EF52 /* ViewController.swift in Sources */,
 				3B00BE3420A9E9A50093EF52 /* AppDelegate.swift in Sources */,
 			);
